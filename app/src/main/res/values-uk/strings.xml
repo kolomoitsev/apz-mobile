@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">APZ-mobile-app</string>
+    <string name="your_email">Ваша пошта</string>
+    <string name="your_password">Ваш пароль</string>
+    <string name="sign_in">Авторизуватися</string>
+    <string name="task_status">Статус завдання:</string>
+    <string name="set_done">Помітити виконаним</string>
+    <string name="created_by">Створений завдяки:</string>
+    <string name="task_deadline">Кінцевий час завдання:</string>
+    <string name="task_length">Тривалість завдання:</string>
+    <string name="task_description">Опис завдання:</string>
+    <string name="task_name">Ім"я завдання:</string>
+    <string name="agenda">Повістка дня</string>
+    <string name="creator_email">Пошта менеджера:</string>
+    <string name="creator_phone">Телефон менеджеру:</string>
+    <string name="category_name">Назва категорії:</string>
+    <string name="category_description">Опис категорії:</string>
+    <string name="tasks">Завдання</string>
+    <string name="animals">Тварини</string>
+    <string name="animal_information">Інформація щодо тварини</string>
+    <string name="animal_name">Ім"я тварини:</string>
+    <string name="animal_rfid">rfid тварини:</string>
+    <string name="animal_status">Статус тварини:</string>
+    <string name="add_new_animal">Додавати нову тварину</string>
+    <string name="show_animals">Показати тварин</string>
+    <string name="save">Зберегти</string>
+    <string name="enter_animal_s_rfid">Введіть rfid тварини</string>
+    <string name="enter_animal_s_name">Введіть ім"я тварини</string>
+    <string name="adding_new_animal">Додавання нової тварини</string>
+</resources>

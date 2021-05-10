@@ -3,6 +3,7 @@ package com.example.apz_mobile;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -45,9 +46,12 @@ public class MainActivity extends AppCompatActivity {
             try {
                 JSONObject tokens = response.getJSONObject("tokens");
 
+                Log.d("User", response.toString());
+
                 String token = tokens.getString("accessToken");
                 String refreshToken = tokens.getString("refreshToken");
                 String email = response.getString("userEmail");
+                String reservation = response.getString("reservationId");
                 String id = response.getString("_id");
 
                 SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
@@ -60,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                 editor.putString("email", email);
                 editor.apply();
                 editor.putString("id", id);
+                editor.apply();
+                editor.putString("reservationId", reservation);
                 editor.apply();
 
                 startActivity(intent);

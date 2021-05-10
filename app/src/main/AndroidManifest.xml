@@ -14,16 +14,16 @@
         android:theme="@style/Theme.Apzmobile"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".ThirdActivity" >
+        <activity android:name=".NewAnimalActivity" />
+        <activity android:name=".SingleAnimalActivity" />
+        <activity android:name=".AnimalsActivity" />
+        <activity android:name=".ThirdActivity" />
+        <activity android:name=".SecondActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".SecondActivity">
-        </activity>
-        <activity android:name=".MainActivity" >
-
         </activity>
     </application>
 

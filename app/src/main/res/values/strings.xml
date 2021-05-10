@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">apz-mobile</string>
+    <string name="app_name">APZ-mobile-app</string>
     <string name="your_email">Your email</string>
     <string name="your_password">Your password</string>
     <string name="sign_in">Sign in</string>
@@ -16,4 +16,15 @@
     <string name="category_name">Category name:</string>
     <string name="category_description">Category description:</string>
     <string name="tasks">Tasks</string>
+    <string name="animals">Animals</string>
+    <string name="animal_information">Animal information</string>
+    <string name="animal_name">Animal name:</string>
+    <string name="animal_rfid">Animal rfid:</string>
+    <string name="animal_status">Animal status:</string>
+    <string name="add_new_animal">Add new animal</string>
+    <string name="show_animals">Show animals</string>
+    <string name="save">Save</string>
+    <string name="enter_animal_s_rfid">Enter animal\'s rfid</string>
+    <string name="enter_animal_s_name">Enter animal\'s name</string>
+    <string name="adding_new_animal">Adding new animal</string>
 </resources>

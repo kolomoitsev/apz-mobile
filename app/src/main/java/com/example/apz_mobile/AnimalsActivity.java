@@ -1,14 +1,13 @@
 package com.example.apz_mobile;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -22,26 +21,21 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SecondActivity extends AppCompatActivity {
+public class AnimalsActivity extends AppCompatActivity {
 
-    public ArrayList<String> tasks = new ArrayList<String>();
-
-    public void showAnimals(View view) {
-        Intent intent = new Intent(this, AnimalsActivity.class);
-        startActivity(intent);
-    }
+    public ArrayList<String> animals = new ArrayList<String>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second);
+        setContentView(R.layout.activity_animals);
 
         SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0);
 
         String token = pref.getString("token", "");
         String userId = pref.getString("id", "");
 
-        String url = "http://10.0.2.2:3001/task/assigned/" + userId;
+        String url = "http://10.0.2.2:3001/animal/";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         JsonArrayRequest getRequest = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -50,8 +44,8 @@ public class SecondActivity extends AppCompatActivity {
                     for (int i = 0; i < response.length(); i++) {
                         try {
                             JSONObject obj = response.getJSONObject(i);
-                            String taskName = obj.getString("taskName");
-                            tasks.add(taskName);
+                            String taskName = obj.getString("animalName");
+                            animals.add(taskName);
                         } catch (Exception e) {
                             Log.d("Exception", e.getMessage());
                         }
@@ -60,19 +54,18 @@ public class SecondActivity extends AppCompatActivity {
                     ListView listView = findViewById(R.id.listView);
 
                     ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                            android.R.layout.simple_list_item_1, tasks);
+                            android.R.layout.simple_list_item_1, animals);
 
                     listView.setOnItemClickListener((parent, view, position, id) -> {
                         try {
 
-                            Intent intent = new Intent(this, ThirdActivity.class);
+                            Intent intent = new Intent(this, SingleAnimalActivity.class);
 
                             SharedPreferences.Editor editor = pref.edit();
 
                             JSONObject obj = response.getJSONObject(position);
-                            String taskId = obj.getString("_id");
-
-                            editor.putString("taskId", taskId);
+                            String animalId = obj.getString("_id");
+                            editor.putString("animalId", animalId);
                             editor.apply();
 
                             startActivity(intent);
@@ -101,8 +94,5 @@ public class SecondActivity extends AppCompatActivity {
 
         queue.add(getRequest);
 
-
     }
-
-
 }
