@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">apz-mobile</string>
+    <string name="your_email">Your email</string>
+    <string name="your_password">Your password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="task_status">Task status:</string>
+    <string name="set_done">Set done</string>
+    <string name="created_by">Created by:</string>
+    <string name="task_deadline">Task deadline:</string>
+    <string name="task_length">Task length:</string>
+    <string name="task_description">Task description:</string>
+    <string name="task_name">Task name:</string>
+    <string name="agenda">Agenda</string>
+    <string name="creator_email">Creator email:</string>
+    <string name="creator_phone">Creator phone:</string>
+    <string name="category_name">Category name:</string>
+    <string name="category_description">Category description:</string>
+    <string name="tasks">Tasks</string>
+</resources>

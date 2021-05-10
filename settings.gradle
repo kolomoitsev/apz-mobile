@@ -1,0 +1,2 @@
+rootProject.name = "apz-mobile"
+include ':app'
